@@ -9,6 +9,11 @@ var app = new Vue({
         dischi: [],
         arraydischi: 10
     },
+    methods:{
+        changegenre(){
+            
+        }
+    },
     mounted() {
 
         axios

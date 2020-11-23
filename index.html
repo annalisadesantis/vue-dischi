@@ -15,6 +15,14 @@
     </head>
     <body>
         <div id="root">
+            <header>
+                <h1>Seleziona il tuo genere preferito</h1>
+                <select class="tendina">
+                    <option value=" ">
+                        Seleziona
+                    </option>
+                </select>
+            </header>
             <div class="container">
                 <div class="card" v-for="disco in dischi" v-if="dischi.length == arraydischi">
                     <img :src="disco.poster" :alt="disco.author">
