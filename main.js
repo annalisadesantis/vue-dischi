@@ -7,13 +7,8 @@ var app = new Vue({
     el: "#root",
     data: {
         dischi: [],
-        arraydischi: 10,
-        generi: []
-    },
-    methods:{
-        change(index){
-
-        }
+        generi: [],
+        selezionato: ""
     },
     mounted() {
 

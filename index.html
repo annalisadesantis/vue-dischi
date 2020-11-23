@@ -17,17 +17,17 @@
         <div id="root">
             <header>
                 <h1>Seleziona il tuo genere preferito</h1>
-                <select class="tendina">
-                    <option value=" ">
+                <select class="tendina" v-model="selezionato">
+                    <option value="">
                         Seleziona
                     </option>
-                    <option value="genere" v-for="genere in generi">
+                    <option :value="genere" v-for="genere in generi">
                         {{ genere }}
                     </option>
                 </select>
             </header>
             <div class="container">
-                <div class="card" v-for="disco in dischi" v-if="dischi.length == arraydischi">
+                <div class="card" v-for="disco in dischi" v-if="disco.genre == selezionato || selezionato == ''">
                     <img :src="disco.poster" :alt="disco.author">
                     <h3>{{ disco.title }}</h3>
                     <h4>{{ disco.author }}</h4>
