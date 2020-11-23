@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #006db0;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.container{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    background-color: #5d8aa8;
+    border: 4px solid #003153;
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #000039;
+    font-size: 15px;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    border: 4px solid #003153;
+}

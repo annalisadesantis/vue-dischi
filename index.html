@@ -5,6 +5,9 @@
         <title>Vue-dischi</title>
         <!-- CSS -->
         <link rel="stylesheet" href="style.css">
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
         <!-- AJAX -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
         <!-- VUE -->
@@ -12,7 +15,15 @@
     </head>
     <body>
         <div id="root">
-
+            <div class="container">
+                <div class="card" v-for="disco in dischi" v-if="dischi.length == arraydischi">
+                    <img :src="disco.poster" :alt="disco.author">
+                    <h3>{{ disco.title }}</h3>
+                    <h4>{{ disco.author }}</h4>
+                    <span>{{ disco.genre }}</span>
+                    <span>{{ disco.year }}</span>
+                </div>
+            </div>
         </div>
         <!-- JAVASCRIPT -->
         <script src="main.js" charset="utf-8"></script>
