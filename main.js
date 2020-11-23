@@ -7,12 +7,11 @@ var app = new Vue({
     el: "#root",
     data: {
         dischi: [],
-        arraydischi: 10
+        arraydischi: 10,
+        generi: []
     },
     methods:{
-        changegenre(){
-            
-        }
+
     },
     mounted() {
 
@@ -21,6 +20,14 @@ var app = new Vue({
             .then((response) => {
                 this.dischi = response.data.response;
                 console.log(this.dischi);
+            })
+            .then((response) => {
+                this.dischi.forEach((disco) => {
+                    if(!this.generi.includes(disco.genre)) {
+                        this.generi.push(disco.genre);
+                    }
+                });
+                console.log(this.generi);
             });
 
     }
