@@ -11,13 +11,25 @@ var app = new Vue({
         generi: []
     },
     methods:{
+        change(index){
 
+        }
     },
     mounted() {
 
         axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((response) => {
+                function maggiore(a,b) {
+                    if (a.year < b.year){
+                        return -1;
+                    }
+                    else if (a.year > b.year){
+                        return 1;
+                    }
+                    return 0;
+                }
+                response.data.response.sort(maggiore);
                 this.dischi = response.data.response;
                 console.log(this.dischi);
             })
