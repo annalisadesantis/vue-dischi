@@ -10,7 +10,7 @@ var app = new Vue({
         dischi: [],
         // Array di generi nusicali
         generi: [],
-        // Valore dell'elemento selezionato ocn la tendina 
+        // Valore dell'elemento selezionato ocn la tendina
         selezionato: ""
     },
     mounted() {
@@ -32,6 +32,7 @@ var app = new Vue({
                 response.data.response.sort(maggiore);
                 // Assegno direttamente il risultato dell'api all'array dischi
                 this.dischi = response.data.response;
+                console.log(response);
             })
             .then((response) => {
                 // Faccio un ciclo per ricavare i tipi di generi presenti nell'array dischi
